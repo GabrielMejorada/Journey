@@ -1,0 +1,102 @@
+/* general stuff */
+html{
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+} 
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:#FFDAB9;
+}
+
+/* anchor styling */
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:active{
+  text-decoration: none;
+}
+
+/* fonts */
+
+h1{
+  font-family: "Press Start 2P";
+}
+
+/* navbar */
+
+.navbar{
+  position: sticky;
+  top: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: #FFB6C1;
+}
+
+/* navbar elements */
+.navdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navdiv ul li{
+  list-style: none;
+  display: inline;
+}
+
+
+/* home page */
+.home{
+  height: 100vh;
+}
+
+/* home page elements */
+.greeter{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.skip{
+  display: none;
+  font-weight: bold;
+}
+
+.noJS{
+  display: none;
+  font-weight: bold;
+}
+
+/* about page */
+.about{
+  display: flex;
+  height: 100vh;
+}
+
+/* about page elements */
+.speechBubble{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* my space */
+
+.mySpace{
+  
+}
+
+/* my space elements */
+
+
