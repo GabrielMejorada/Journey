@@ -34,6 +34,16 @@ h1{
   font-family: "Press Start 2P";
 }
 
+p{
+  font-family: "Mulish";
+}
+
+/* global section styling */
+
+section{
+  padding: 1.5rem;
+}
+
 /* navbar */
 
 .navbar{
@@ -98,5 +108,15 @@ h1{
 }
 
 /* my space elements */
+
+/* card component */
+.card{
+  display: flex column;
+}
+
+.card-title{
+  box-shadow: 0 4px 8px 0;
+  transition: 0.3s;
+}
 
 
