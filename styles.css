@@ -52,20 +52,36 @@ section{
   padding-right: 1rem;
   padding-left: 1rem;
   background-color: #FFB6C1;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo{
+}
+
+.navbar a{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /* navbar elements */
 .navdiv{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 4rem;
+}
+
+.navdiv ul{
+  display: flex;
+  list-style: none;
+  gap: 2rem; 
+  margin: 0;
+  padding: 0;
 }
 
 .navdiv ul li{
-  list-style: none;
-  display: inline;
+  display: block;
 }
-
 
 /* home page */
 .home{
@@ -112,11 +128,13 @@ section{
 /* card component */
 .card{
   display: flex column;
+  height: 150px;
+  width: 150px;
+  padding: 1rem;
 }
 
 .card-title{
-  box-shadow: 0 4px 8px 0;
-  transition: 0.3s;
+
 }
 
 
