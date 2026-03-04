@@ -1,10 +1,21 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-  function placeholderFunction (){
-    const placeholderConst = document.getElementById("greeterAnimation");
+  const element = document.getElementById("greeterAnimation");
+  const fullText = "Welcome to my website!! ^.^";
+  let i = 0;
+  let typingTimer;
 
-    placeholderConst.textContent = "Test";
-    console.log("This works")
+  function type() {
+    if (i < fullText.length) {
+      element.textContent += fullText.charAt(i);
+      i++;
+      typingTimer = setTimeout(type, 100);
+    }
   }
+  
+  element.textContent = "";
+  type();
+
+  document.querySelector
 });
 

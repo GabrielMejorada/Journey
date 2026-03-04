@@ -48,6 +48,7 @@ section{
 
 .navbar{
   position: sticky;
+  z-index: 1000;
   top: 0;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -94,6 +95,11 @@ section{
 
 /* home page */
 .home{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   height: 100vh;
 }
 
@@ -102,33 +108,33 @@ section{
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem;
-  overflow: hidden;
-  border-right: 1px solid;
-  animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+  border: 1rem;
+  background-color: #CD5C5C;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100;
-  }
+ /* typewriter animation */
+#greeterAnimation {
+  display: inline-block;
+  margin: 0;
+  border-right: 3px solid #000; 
+  animation: blink 0.75s step-end infinite;
+  white-space: nowrap;
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  from, to { border-color: transparent; }
+  50% { border-color: #000; }
 }
 
 .skip{
-  display: none;
+  position: absolute;
   font-weight: bold;
+  bottom: 40px;
+  right: 40px;
 }
 
 .noJS{
+  position: absolute;
   display: none;
   font-weight: bold;
 }
