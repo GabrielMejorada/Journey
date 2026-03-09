@@ -2,6 +2,8 @@
 html{
   overscroll-behavior: none;
   scroll-behavior: smooth;
+  /* headers don't collide with navbar */
+  scroll-padding-top: 60px;
 } 
 
 body{
@@ -96,8 +98,9 @@ section{
 /* home page */
 .home{
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
   align-items: center;
   text-align: center;
   height: 100vh;
@@ -105,6 +108,8 @@ section{
 
 /* home page elements */
 .greeter{
+  grid-area: 1/1;
+  place-self: center;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem;
@@ -126,17 +131,31 @@ section{
   50% { border-color: #000; }
 }
 
+/* TO-DO: Fix this! */
 .skip{
-  position: absolute;
+  display: inline-block
+  border: 1rem solid;
+  padding: 1rem;
   font-weight: bold;
-  bottom: 40px;
-  right: 40px;
 }
 
 .noJS{
-  position: absolute;
-  display: none;
+  display: inline-block;
+  background-color: #87CEEB;
+  border: 1rem solid;
+  padding: 1rem;
   font-weight: bold;
+  width: 300px;
+  padding: 2px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.noJS h1{
+  font-size: 20px;
 }
 
 /* about page */
