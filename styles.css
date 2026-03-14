@@ -98,9 +98,9 @@ section{
 /* home page */
 .home{
   position: relative;
-  display: grid
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   text-align: center;
   height: 100vh;
@@ -131,15 +131,9 @@ section{
   50% { border-color: #000; }
 }
 
-/* TO-DO: Fix this! */
-.skip{
-  display: inline-block
-  border: 1rem solid;
-  padding: 1rem;
-  font-weight: bold;
-}
-
-.noJS{
+.skip, .noJS{
+  position: absolute;
+  right: 20px;
   display: inline-block;
   background-color: #87CEEB;
   border: 1rem solid;
@@ -152,7 +146,31 @@ section{
   border-right: 2px solid #404040;
   border-bottom: 2px solid #404040;
   box-shadow: 2px 2px 0px #000;
+  animation: popUp 0.5s ease-out forwards;
+  z-index: 10;
 }
+
+.skip{
+  bottom: 150px;
+}
+
+.noJS{
+  bottom: 20px
+}
+
+@keyframes popUp{
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+}
+
 
 .noJS h1{
   font-size: 20px;
