@@ -2,8 +2,7 @@
 html{
   overscroll-behavior: none;
   scroll-behavior: smooth;
-  /* headers don't collide with navbar */
-  scroll-padding-top: 60px;
+  scroll-padding-top: 4rem; /*headers don't collide with navbar */
 } 
 
 body{
@@ -131,6 +130,7 @@ section{
   50% { border-color: #000; }
 }
 
+/*
 .skip, .noJS{
   position: absolute;
   right: 20px;
@@ -147,7 +147,6 @@ section{
   border-bottom: 2px solid #404040;
   box-shadow: 2px 2px 0px #000;
   animation: popUp 0.5s ease-out forwards;
-  z-index: 10;
 }
 
 .skip{
@@ -175,17 +174,34 @@ section{
 .noJS h1{
   font-size: 20px;
 }
+*/
 
 /* about page */
 .about{
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
 }
 
 /* about page elements */
 .speechBubble{
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.otherContainer{
+  max-width: 45rem;
+  text-align: left;
+}
+
+.otherContainer p{
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 /* my space */
