@@ -9,7 +9,9 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color:#FFDAB9;
+  background-color: #FFDAB9;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem);
+  background-size: 1.5rem 1.5rem; 
 }
 
 /* anchor styling */
@@ -113,7 +115,7 @@ section{
   font-weight: bold;
   padding: 1rem;
   border: 1rem;
-  background-color: #CD5C5C;
+  background-color: #87CEEB;
 }
 
  /* typewriter animation */
@@ -139,6 +141,7 @@ section{
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
+  margin-bottom: 8rem;
 }
 
 /* about page elements */
@@ -163,7 +166,8 @@ section{
 .mySpace{
   display: flex;
   flex-direction: column;
-  gap: 5rem
+  gap: 5rem;
+  margin-top: 10rem;
 }
 
 /* my space elements */
@@ -171,6 +175,9 @@ section{
 .mySpaceIntro{
   text-align: center;
   margin-bottom: 5rem;
+  padding: 3rem;
+  background: #87CEEB;
+  border: 0.5rem solid;
 }
 
 .era-apple {
@@ -226,26 +233,67 @@ section{
 .vaporwave-hero{
   position: relative;
   overflow: hidden;
-  background: #5d2a9b;
-  background: linear-gradient(90deg,rgba(93, 42, 155, 1) 25%, rgba(203, 38, 209, 1) 45%, rgba(237, 221, 83, 1) 100%);
-  text-align: center;
-  padding: 5rem;
+  text-align: center; 
+  background: #1a062d;
+  background-position: center bottom;
+  perspective: 62rem;
+  overflow: hidden;
+  padding: 10rem 5rem;
+  min-height: 25rem;
 }
 
-.vaporwave-hero::before{
-  content: "";
-  position: absolute:
-  bottom: 0;
+.vaporwave-hero::before { /* Sun effect */
+  content: '';
+  position: absolute;
+  width: 19rem;
+  height: 19rem;
+  background: linear-gradient(#ff00c1, #ff8a00);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  z-index: 1;
+  box-shadow: 0 0 3.25rem #ff00c1;
+}
+
+.vaporwave-hero::after { /* Grid floor */
+  content: '';
+  position: absolute;
+  top: 50%; 
   left: -50%;
   width: 200%;
-  height: 100%;
-
+  height: 200%;
+  background-image: 
+    linear-gradient(rgba(203, 38, 209, 0.6) 0.0625rem, transparent 0.0625rem),
+    linear-gradient(90deg, rgba(203, 38, 209, 0.6) 0.0625rem, transparent 0.0625rem);
+  background-size: 3rem 3rem;
+  transform: rotateX(60deg); 
+  z-index: 0;
 }
 
 .vaporwave-hero h1{
+  position: relative;
   font-family: VT323;
   font-size: 3rem;
   font-style: italic;
+  background: linear-gradient(45deg, #5d2a9b, #CB26D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0.25rem 0.25rem 0rem #5d2a9b);
+    text-transform: uppercase;
+  z-index: 2;
+  margin: 0;
+}
+
+.text-box{
+  position: relative;
+  z-index: 2;
+  background-color: rgba(3, 242, 255, 0.2);
+  padding: 1rem 2.5rem;
+  border: 0.125rem solid #00f2ff;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 242, 255, 0.3);
 }
 
 /* card component */
@@ -260,17 +308,12 @@ section{
 .card{
   background: #87CEEB;
   padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1);
+  border: 0.5rem solid; 
   flex: 1 1 18rem;
   max-width: 25rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2 ease;
 }
 
-.card:hover{
-  transform: translateY(-0.3rem);
-}
 
 
